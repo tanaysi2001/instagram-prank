@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login Prank</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #fafafa;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            background: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2878c9;
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="showPrankMessage()">Log In</button>
+        <p class="hidden-message" id="prank-message">⚠️ Your account has been hacked! Please reset your password. 😱</p>
+    </div>
+    
+    <script>
+        function showPrankMessage() {
+            let message = document.getElementById("prank-message");
+            message.style.display = "block";
+            
+            // Change message after 3 seconds
+            setTimeout(() => {
+                message.innerHTML = "😂 April Fool! Your account is safe!";
+                message.style.color = "green";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
